@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>New_User</title>
+	<style type="text/css">
+		.top{
+			text-align: center;
+
+		}
+		.top img{
+			width: 50px;
+    		height: 50px;
+    		border-radius: 50%;
+    		display: block;
+    		margin-left: auto;
+    		margin-right: auto;
+    		margin-top: 10px;
+		}
+		.formdiv {
+  			
+  			width: 75%;
+  			margin: auto;
+  			margin-top: 40px;
+  			text-align: left;
+  			padding-bottom: 70px;
+			background-color: rgb(201, 241, 183);
+		}
+		form{
+			margin-left: 30px;
+		}
+
+		form label {
+  			display: inline-block;
+  			text-align: right;
+  			padding-left: 20px;
+  			width: 200px;
+  			height: 50px;
+  			font-weight: bold;
+		}
+
+		form input {
+  			margin-left: 25px;
+		}
+
+		form select {
+  			margin-left: 25px;
+  			padding-top: 5px;
+  			padding-bottom: 5px;
+  			padding-right: 14px;
+  			text-align: left;
+		}
+
+		form input {
+  			padding: 7px 20px;
+  			border: 3px solid #ccc;
+  			border-radius: 6px;
+  			width: auto;
+		}
+
+		#btn1{
+  			margin-left: 250px;
+  			padding: 15px 15px;
+  			background-color: #4CAF50;
+			font-size: 16px;
+			text-align: center;
+			cursor: pointer;
+			font-weight: bold;
+			border-radius: 6px;
+
+		}
+		#btn2{
+  			margin-left: 500px;
+  			padding: 15px 15px;
+  			background-color: white;
+			color:black;
+			font-size: 16px;
+			font-weight: bold;
+			border: 2px solid #008CBA;
+			border-radius: 6px;
+		}
+		body{
+			background-image: url(vit-1.jpg.jpeg);
+			height: 100%;
+			width: 100%;
+			margin-top: 35px;
+ 			background-position: center;
+  		    background-repeat: no-repeat;
+  		    background-size: cover;
+  		    overflow: hidden;
+  		    opacity: 0.9;
+		}
+		.bg{
+			margin-left: 35px;
+			width: 95%;
+			height: 100%;
+			
+		}
+		.h2cent{
+			color: rgb(26, 94, 29);
+			font-size: 30px;
+			
+		}
+
+	</style>
+</head>
+<body>
+	<div class="bg">
+	<div class="top">
+		
+		<h2 class="h2cent">VIT Cycle Rentals</h2>	
+	</div>
+	
+	<div class="formdiv" >
+      <br />
+      <form action="Mainpage.html">
+        <label for="Dname">Name</label>
+        <input
+          type="text"
+          id="Dname"
+          size="90px"
+          required
+        /><br />
+        <label for="Reg_No">Reg_No</label>
+        <input
+          type="text"
+          id="Reg_No"
+          size="90px"
+          placeholder="11XXX0000"
+          required
+        /><br />
+        <label for="Degree">Degree</label>
+        <select name="Degree" id="Degree" required>
+          <option hidden>--select--</option>
+          <option value="Payment" >BTech</option>
+          <option value="Paymentn">MTech</option>
+          <option value="Paymentn">MTech(Integrated)</option>
+          <option value="Paymentn">Other</option>
+
+      	</select><br />
+        <label for="Branch">Branch</label>
+        <input type="text" id="Branch" size="90px" required /><br />
+        <label for="Hostel">Hostel Block</label>
+        <input type="text" id="Branch" size="90px" required /><br />
+        <label for="Gender">Gender </label>
+		<input type="radio" name="Gender" value="Male" >Male
+		<input type="radio" name="Gender" value="Female" >Female
+		<input type="radio" name="Gender" value="Other" >Other
+		<br>
+        <label for="num">Mobile No</label>
+        <input
+          size="90px"
+          type="text"
+          id="num"
+          placeholder="01xxxxxxxxx"
+          required
+        /><br />
+        <label for="Mail">E-Mail</label>
+        <input
+          type="email"
+          id="mail"
+          size="90px"
+          pattern=".+@vitstudent.ac.in"
+          placeholder="xyz@vit.ac.in"
+          title = "You should enter Mail_id Given by VIT"
+          required
+        /><br />
+        <button id="btn1" type="submit" >Submit</button>
+        <button id="btn2" type="reset">Reset</button><br />
+      </form>
+    </div>
+    </div>
+</body>
+</html>

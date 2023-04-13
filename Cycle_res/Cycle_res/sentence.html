@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Enter your name : <input type="text" id="na">
+<br>
+<br>
+Enter a  String : <input type="text" id="myText" name="fname">
+<br>
+<br>
+Enter a  word to find its occurence : <input type="text" id="word" name="word">
+<br>
+<br>
+<button onclick="myFunction()">Submit</button>
+
+<p id="demo"></p><br>
+<p id="dew"></p><br>
+<p id="nano"></p>
+<script>
+function myFunction() {
+  var name=document.getElementById("na").value;
+ var x = document.getElementById("myText").value;
+ document.getElementById("demo").innerHTML = "Adding the name to the given String: "+x+name;
+ var y=x.split("").reverse().join("");
+ document.getElementById("dew").innerHTML="Reversing the given string: "+y;
+   var word=document.getElementById("word").value;
+   var regExp = new RegExp(word, "gi");
+  var z= (x.match(regExp) || []).length;
+  document.getElementById("nano").innerHTML = "Number of Occurence of the given word: " +z;
+    }
+</script>
+
+</body>
+</html>

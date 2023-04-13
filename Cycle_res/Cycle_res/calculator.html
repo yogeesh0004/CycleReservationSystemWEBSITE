@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Calculator(20BCE0004)</title>
+<style>
+ body {
+ background-color: #b34500;
+ }
+ .container {
+ width: 320px;
+ background-color: rgb(246, 240, 240);
+ margin: 120px auto;
+ }
+ table {
+ width: 100%;
+ border-color: #e6e0d9;
+ border-style: ridge;
+ }
+ td {
+ width: 25%;
+}
+button {
+width: 100%;
+height: 70px;
+font-size: 24px;
+background-color: grey;
+border: none;
+}
+#inputLabel {
+height: 120px;
+font-size: 40px;
+vertical-align: bottom;
+text-align: right;
+padding-right: 16px;
+background-color: #ececec;
+}
+#h1{
+   font-size: 25px;
+text-align:center;
+margin-bottom: 0px;
+margin-top: 0px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-width:3px;
+border-color: #f9f3f3;
+border-style:outset;
+background-color: grey;
+ }
+</style>
+</head>
+<body>
+<div class="container">
+ <h1 id="h1"><em> YOGEESH'S CALCULATOR</em></h1>
+ <table border="3" cellspacing="0">
+ <tr>
+ <td colspan="4" id="inputLabel">0</td>
+ </tr>
+ <tr>
+   <td colspan="3"><button 
+     onclick="pushBtn(this);">AC</button></td>
+   <td><button onclick="pushBtn(this);">/</button></td>
+   </tr>
+ 
+ <tr>
+ <td><button onclick="pushBtn(this);">7</button></td>
+ <td><button onclick="pushBtn(this);">8</button></td>
+ <td><button onclick="pushBtn(this);">9</button></td>
+ <td><button onclick="pushBtn(this);">*</button></td>
+ </tr>
+ <tr>
+ <td><button onclick="pushBtn(this);">4</button></td>
+ <td><button onclick="pushBtn(this);">5</button></td>
+ <td><button onclick="pushBtn(this);">6</button></td>
+ <td><button onclick="pushBtn(this);">-</button></td>
+ </tr>
+ <tr>
+ <td><button onclick="pushBtn(this);">1</button></td>
+ <td><button onclick="pushBtn(this);">2</button></td>
+ <td><button onclick="pushBtn(this);">3</button></td>
+ <td><button onclick="pushBtn(this);">+</button></td>
+ </tr>
+ <tr>
+ <td colspan="2"><button
+onclick="pushBtn(this);">0</button></td>
+ <td><button onclick="pushBtn(this);">.</button></td>
+ <td><button onclick="pushBtn(this);">=</button></td>
+ </tr>
+ </table>
+</div>
+<script>
+ var inputLabel = document.getElementById('inputLabel');
+ function pushBtn(obj) {
+    var pushed = obj.innerHTML;
+ if (pushed == '=') {
+ // Calculate
+ inputLabel.innerHTML = eval(inputLabel.innerHTML);
+ } else if (pushed == 'AC') {
+ // All Clear
+ inputLabel.innerHTML = '0';
+ } else {
+ if (inputLabel.innerHTML == '0') {
+ inputLabel.innerHTML = pushed;
+ } else {
+ inputLabel.innerHTML += pushed;
+ }
+ }
+ }
+</script>
+</body>
+</html>
